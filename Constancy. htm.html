@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MT Consultancy | Program Development · Research · M&E · Training</title>
+  <meta name="description" content="Professional consultancy for Program Development, Business Research, Business Analysis, Proposal & Concept Note Development, Model Development, Training Delivery, and Monitoring & Evaluation.">
+  <meta name="theme-color" content="#6366f1">
+  <meta property="og:title" content="MT Consultancy | Program Development & Business Research">
+  <meta property="og:description" content="Expert consultancy: Program Development · Research · Business Analysis · Proposals · Models · Training · M&E">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --blue: #3b82f6;
+      --indigo: #6366f1;
+      --purple: #8b5cf6;
+      --pink: #ec4899;
+      --rose: #f43f5e;
+      --orange: #f97316;
+      --amber: #f59e0b;
+      --green: #10b981;
+      --emerald: #059669;
+      --teal: #14b8a6;
+      --cyan: #06b6d4;
+      --dark: #0f172a;
+      --dark-2: #1e293b;
+      --gray: #475569;
+      --gray-light: #64748b;
+      --border: #e2e8f0;
+      --white: #ffffff;
+
+      --grad-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --grad-edu: linear-gradient(135deg, #3b82f6, #06b6d4);
+      --grad-cp: linear-gradient(135deg, #10b981, #14b8a6);
+      --grad-cd: linear-gradient(135deg, #f59e0b, #f97316);
+      --grad-cross: linear-gradient(135deg, #8b5cf6, #ec4899);
+      --grad-rainbow: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #f97316, #eab308, #10b981);
+      --grad-whatsapp: linear-gradient(135deg, #25D366, #128C7E);
+      --grad-facebook: linear-gradient(135deg, #1877F2, #0a5fd9);
+      --grad-linkedin: linear-gradient(135deg, #0A66C2, #004182);
+      --grad-telegram: linear-gradient(135deg, #229ED9, #0088cc);
+      --grad-1: linear-gradient(135deg, #6366f1, #8b5cf6);
+      --grad-2: linear-gradient(135deg, #ec4899, #f43f5e);
+      --grad-3: linear-gradient(135deg, #f59e0b, #f97316);
+      --grad-4: linear-gradient(135deg, #10b981, #14b8a6);
+      --grad-5: linear-gradient(135deg, #06b6d4, #3b82f6);
+      --grad-6: linear-gradient(135deg, #8b5cf6, #ec4899);
+      --grad-7: linear-gradient(135deg, #ef4444, #f97316);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--dark-2);
+      line-height: 1.6;
+      background: #f8fafc;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+    /* ============ FLOATING BUTTONS ============ */
+    .fab-stack {
+      position: fixed; bottom: 24px; right: 24px;
+      display: flex; flex-direction: column; gap: 12px; z-index: 500;
+    }
+    .fab {
+      width: 58px; height: 58px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 1.5rem; cursor: pointer;
+      text-decoration: none; position: relative;
+      box-shadow: 0 10px 26px -8px rgba(0,0,0,0.4);
+      transition: transform 0.25s;
+      animation: pulse 2.5s infinite;
+    }
+    .fab:hover { transform: scale(1.1); }
+    .fab.whatsapp { background: var(--grad-whatsapp); }
+    .fab.call { background: var(--grad-hero); animation-name: pulseCall; }
+    .fab.top { background: #1e293b; font-size: 1.1rem; animation: none; opacity: 0; pointer-events: none; transition: all 0.3s; }
+    .fab.top.show { opacity: 1; pointer-events: auto; }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6), 0 10px 26px -8px rgba(0,0,0,0.4); }
+      70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0), 0 10px 26px -8px rgba(0,0,0,0.4); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 10px 26px -8px rgba(0,0,0,0.4); }
+    }
+    @keyframes pulseCall {
+      0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.6), 0 10px 26px -8px rgba(0,0,0,0.4); }
+      70% { box-shadow: 0 0 0 18px rgba(99, 102, 241, 0), 0 10px 26px -8px rgba(0,0,0,0.4); }
+      100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0), 0 10px 26px -8px rgba(0,0,0,0.4); }
+    }
+    .fab .label {
+      position: absolute; right: 72px; top: 50%; transform: translateY(-50%);
+      background: #0f172a; color: white; padding: 8px 14px;
+      border-radius: 8px; font-size: 0.8rem; font-weight: 600;
+      white-space: nowrap; opacity: 0; pointer-events: none;
+      transition: opacity 0.2s;
+    }
+    .fab .label::after {
+      content: ''; position: absolute; right: -6px; top: 50%; transform: translateY(-50%);
+      border: 6px solid transparent; border-left-color: #0f172a;
+    }
+    .fab:hover .label { opacity: 1; }
+
+    /* ============ TOP BAR ============ */
+    .topbar {
+      background: var(--dark); color: #cbd5e1;
+      font-size: 0.78rem; padding: 8px 0;
+      border-bottom: 1px solid #1e293b;
+    }
+    .topbar-wrap {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; flex-wrap: wrap;
+    }
+    .topbar-left { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+    .topbar-left span { display: flex; align-items: center; gap: 6px; }
+    .topbar-left i { color: var(--purple); }
+    .topbar-social { display: flex; gap: 8px; }
+    .topbar-social a {
+      color: #cbd5e1; width: 26px; height: 26px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 6px; background: #1e293b;
+      text-decoration: none; font-size: 0.75rem;
+      transition: all 0.2s;
+    }
+    .topbar-social a.fb:hover { background: #1877F2; color: white; }
+    .topbar-social a.li:hover { background: #0A66C2; color: white; }
+    .topbar-social a.wa:hover { background: #25D366; color: white; }
+    .topbar-social a.tg:hover { background: #229ED9; color: white; }
+    .topbar-social a.em:hover { background: var(--pink); color: white; }
+
+    /* ============ NAVBAR ============ */
+    .navbar {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 0;
+      transition: box-shadow 0.3s;
+    }
+    .navbar.scrolled { box-shadow: 0 4px 30px rgba(99, 102, 241, 0.1); }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+
+    .logo {
+      display: flex; align-items: center; gap: 12px;
+      font-family: 'Poppins', sans-serif; font-weight: 800;
+      font-size: 1.25rem; color: var(--dark); text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .logo-icon {
+      background: var(--grad-rainbow);
+      background-size: 200% 200%;
+      animation: shimmer 4s ease infinite;
+      color: white; width: 44px; height: 44px;
+      border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      font-size: 1.05rem;
+      box-shadow: 0 8px 22px -6px rgba(139, 92, 246, 0.55);
+    }
+    @keyframes shimmer { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
+    .logo span {
+      background: var(--grad-hero);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-links { display: flex; gap: 24px; align-items: center; font-weight: 500; font-size: 0.87rem; }
+    .nav-links a {
+      text-decoration: none; color: var(--gray);
+      transition: color 0.2s; position: relative; padding: 6px 0;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: 0; left: 50%;
+      width: 0; height: 2px; background: var(--grad-rainbow);
+      transition: all 0.3s; transform: translateX(-50%); border-radius: 2px;
+    }
+    .nav-links a:hover { color: var(--indigo); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-actions { display: flex; gap: 8px; align-items: center; }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 18px; border-radius: 30px;
+      font-weight: 600; font-size: 0.82rem;
+      text-decoration: none; transition: all 0.25s;
+      border: 2px solid transparent; cursor: pointer;
+      font-family: inherit; white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--grad-hero); color: white;
+      box-shadow: 0 8px 20px -6px rgba(99, 102, 241, 0.5);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px -8px rgba(99, 102, 241, 0.6);
+    }
+    .btn-outline { background: white; color: var(--dark-2); border-color: var(--border); }
+    .btn-outline:hover { border-color: var(--indigo); color: var(--indigo); background: #f5f3ff; }
+    .btn-whatsapp { background: var(--grad-whatsapp); color: white; box-shadow: 0 8px 20px -6px rgba(37, 211, 102, 0.5); }
+    .btn-whatsapp:hover { transform: translateY(-2px); box-shadow: 0 14px 28px -8px rgba(37, 211, 102, 0.6); }
+    .btn-lg { padding: 14px 28px; font-size: 0.92rem; }
+
+    .hamburger {
+      display: none; background: none; border: none;
+      font-size: 1.3rem; color: var(--dark); cursor: pointer; padding: 6px;
+    }
+
+    /* ============ HERO ============ */
+    .hero { padding: 60px 0 70px; position: relative; }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.1fr 0.9fr;
+      gap: 50px; align-items: center;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, #fef3c7, #fed7aa);
+      color: #92400e; font-weight: 700; font-size: 0.72rem;
+      padding: 7px 16px; border-radius: 30px;
+      letter-spacing: 0.4px; text-transform: uppercase;
+      margin-bottom: 20px; border: 1px solid #fbbf24;
+    }
+    .hero h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(1.9rem, 4.4vw, 2.95rem);
+      font-weight: 800; line-height: 1.12;
+      letter-spacing: -0.03em; color: var(--dark);
+      margin-bottom: 20px;
+    }
+    .hero h1 .grad {
+      background: var(--grad-hero);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero h1 .grad-pink {
+      background: linear-gradient(135deg, #ec4899, #f97316);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero p.lead { font-size: 1.03rem; color: var(--gray); margin-bottom: 26px; max-width: 580px; }
+    .hero-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 26px; }
+
+    .trust-row {
+      display: flex; gap: 20px; flex-wrap: wrap;
+      padding-top: 22px; border-top: 1px solid var(--border);
+    }
+    .trust-item { display: flex; align-items: center; gap: 10px; }
+    .trust-item i { color: var(--green); font-size: 1.05rem; }
+    .trust-item span { font-size: 0.82rem; color: var(--gray); font-weight: 600; }
+
+    .profile-card {
+      background: white; border-radius: 28px;
+      padding: 30px 28px;
+      box-shadow: 0 30px 60px -25px rgba(99, 102, 241, 0.3);
+      border: 1px solid var(--border);
+      position: relative; overflow: hidden;
+    }
+    .profile-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px;
+      background: var(--grad-rainbow); background-size: 200% 200%;
+      animation: shimmer 4s ease infinite;
+    }
+    .profile-top { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; }
+    .avatar {
+      width: 68px; height: 68px; border-radius: 20px;
+      background: var(--grad-hero);
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-family: 'Poppins', sans-serif;
+      font-weight: 800; font-size: 1.5rem; flex-shrink: 0;
+      box-shadow: 0 10px 24px -8px rgba(139, 92, 246, 0.6);
+    }
+    .profile-top h3 {
+      font-family: 'Poppins', sans-serif; font-size: 1.15rem;
+      font-weight: 700; color: var(--dark);
+    }
+    .profile-top p { font-size: 0.82rem; color: var(--gray-light); }
+
+    .profile-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
+    .stat { text-align: center; padding: 12px 6px; border-radius: 14px; }
+    .stat.s-blue { background: linear-gradient(135deg, #dbeafe, #bfdbfe); }
+    .stat.s-pink { background: linear-gradient(135deg, #fce7f3, #fbcfe8); }
+    .stat.s-green { background: linear-gradient(135deg, #d1fae5, #a7f3d0); }
+    .stat strong { display: block; font-family: 'Poppins', sans-serif; font-size: 1.15rem; }
+    .stat.s-blue strong { color: #1e40af; }
+    .stat.s-pink strong { color: #9d174d; }
+    .stat.s-green strong { color: #065f46; }
+    .stat span { font-size: 0.65rem; color: var(--gray-light); text-transform: uppercase; letter-spacing: 0.4px; font-weight: 700; }
+
+    .profile-contact { display: flex; flex-direction: column; gap: 8px; margin-top: 6px; }
+    .pc-item { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: var(--gray); }
+    .pc-item i { width: 16px; color: var(--indigo); }
+    .pc-item a { color: var(--indigo); text-decoration: none; font-weight: 600; }
+    .pc-item a:hover { text-decoration: underline; }
+
+    /* ============ SECTIONS ============ */
+    section { padding: 70px 0; position: relative; }
+    .sec-head { text-align: center; max-width: 760px; margin: 0 auto 52px; }
+    .eyebrow {
+      display: inline-block; font-size: 0.72rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 1.5px;
+      padding: 6px 16px; border-radius: 20px; margin-bottom: 16px;
+      border: 1px solid;
+    }
+    .eyebrow.e-blue { background: #dbeafe; color: #1e40af; border-color: #93c5fd; }
+    .eyebrow.e-green { background: #d1fae5; color: #065f46; border-color: #6ee7b7; }
+    .eyebrow.e-amber { background: #fef3c7; color: #92400e; border-color: #fbbf24; }
+    .eyebrow.e-purple { background: #ede9fe; color: #5b21b6; border-color: #c4b5fd; }
+    .eyebrow.e-rainbow {
+      background: var(--grad-rainbow); background-size: 200% 200%;
+      animation: shimmer 4s ease infinite;
+      color: white; border-color: transparent;
+    }
+    .sec-head h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(1.7rem, 3.4vw, 2.3rem);
+      font-weight: 800; letter-spacing: -0.025em;
+      color: var(--dark); margin-bottom: 14px; line-height: 1.2;
+    }
+    .sec-head p { font-size: 1rem; color: var(--gray-light); }
+
+    /* ============ SERVICES (7 SERVICES) ============ */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .service-card {
+      background: white; border-radius: 24px; padding: 30px 26px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px -18px rgba(15,23,42,0.15);
+      transition: all 0.3s; position: relative; overflow: hidden;
+      display: flex; flex-direction: column;
+    }
+    .service-card::before {
+      content: ''; position: absolute; top: 0; left: 0;
+      width: 100%; height: 5px;
+    }
+    .service-card:nth-child(1)::before { background: var(--grad-1); }
+    .service-card:nth-child(2)::before { background: var(--grad-2); }
+    .service-card:nth-child(3)::before { background: var(--grad-3); }
+    .service-card:nth-child(4)::before { background: var(--grad-4); }
+    .service-card:nth-child(5)::before { background: var(--grad-5); }
+    .service-card:nth-child(6)::before { background: var(--grad-6); }
+    .service-card:nth-child(7)::before { background: var(--grad-7); }
+
+    .service-card:hover { transform: translateY(-6px); box-shadow: 0 26px 44px -20px rgba(99,102,241,0.3); }
+
+    .service-icon {
+      width: 58px; height: 58px; border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.55rem; color: white; margin-bottom: 18px;
+      box-shadow: 0 10px 22px -8px rgba(0,0,0,0.25);
+    }
+    .service-card:nth-child(1) .service-icon { background: var(--grad-1); }
+    .service-card:nth-child(2) .service-icon { background: var(--grad-2); }
+    .service-card:nth-child(3) .service-icon { background: var(--grad-3); }
+    .service-card:nth-child(4) .service-icon { background: var(--grad-4); }
+    .service-card:nth-child(5) .service-icon { background: var(--grad-5); }
+    .service-card:nth-child(6) .service-icon { background: var(--grad-6); }
+    .service-card:nth-child(7) .service-icon { background: var(--grad-7); }
+
+    .service-card h3 {
+      font-family: 'Poppins', sans-serif; font-size: 1.12rem;
+      font-weight: 700; color: var(--dark); margin-bottom: 10px;
+      line-height: 1.35;
+    }
+    .service-card p { font-size: 0.88rem; color: var(--gray); margin-bottom: 16px; flex: 1; }
+    .service-tags {
+      display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 16px;
+    }
+    .service-tag {
+      background: #f1f5f9; color: var(--gray);
+      font-size: 0.68rem; font-weight: 600;
+      padding: 3px 9px; border-radius: 10px;
+    }
+    .service-link {
+      text-decoration: none; color: var(--indigo); font-weight: 700;
+      font-size: 0.85rem; display: inline-flex; align-items: center; gap: 6px;
+      transition: gap 0.2s;
+    }
+    .service-link:hover { gap: 12px; }
+
+    /* ============ STORE ============ */
+    .store-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 26px;
+    }
+    .product-card {
+      background: white; border-radius: 24px; overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px -18px rgba(15,23,42,0.15);
+      transition: all 0.3s; display: flex; flex-direction: column;
+      position: relative;
+    }
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 26px 44px -20px rgba(99,102,241,0.3);
+      border-color: #c7d2fe;
+    }
+    .product-thumb {
+      height: 160px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3rem; color: white;
+      position: relative; overflow: hidden;
+    }
+    .product-thumb.p1 { background: var(--grad-1); }
+    .product-thumb.p2 { background: var(--grad-2); }
+    .product-thumb.p3 { background: var(--grad-3); }
+    .product-thumb.p4 { background: var(--grad-4); }
+    .product-thumb.p5 { background: var(--grad-5); }
+    .product-thumb.p6 { background: var(--grad-6); }
+    .product-thumb::after {
+      content: ''; position: absolute; inset: 0;
+      background-image: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.25) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.15) 0%, transparent 50%);
+    }
+    .product-badge {
+      position: absolute; top: 12px; left: 12px;
+      background: white; color: var(--dark); font-size: 0.68rem;
+      font-weight: 800; padding: 5px 12px; border-radius: 20px;
+      text-transform: uppercase; letter-spacing: 0.5px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 2;
+    }
+    .product-badge.hot { background: linear-gradient(135deg, #f43f5e, #ec4899); color: white; }
+    .product-badge.new { background: linear-gradient(135deg, #10b981, #14b8a6); color: white; }
+
+    .product-body { padding: 22px 22px 24px; display: flex; flex-direction: column; flex: 1; }
+    .product-body h3 {
+      font-family: 'Poppins', sans-serif; font-size: 1.02rem;
+      font-weight: 700; color: var(--dark); margin-bottom: 6px;
+      line-height: 1.35;
+    }
+    .product-body .cat {
+      font-size: 0.7rem; color: var(--gray-light);
+      text-transform: uppercase; letter-spacing: 0.6px;
+      font-weight: 700; margin-bottom: 10px;
+    }
+    .product-body p {
+      font-size: 0.85rem; color: var(--gray); margin-bottom: 14px; flex: 1;
+    }
+    .product-meta {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 14px;
+    }
+    .product-price {
+      font-family: 'Poppins', sans-serif; font-weight: 800;
+      font-size: 1.2rem; color: var(--dark);
+    }
+    .product-price small { color: var(--gray-light); font-weight: 500; font-size: 0.72rem; }
+    .product-rating { color: var(--amber); font-size: 0.78rem; font-weight: 700; }
+    .product-rating span { color: var(--gray-light); margin-left: 4px; font-weight: 500; }
+
+    .product-actions { display: flex; gap: 8px; }
+    .product-actions .btn { flex: 1; justify-content: center; padding: 10px 12px; font-size: 0.76rem; }
+
+    /* ============ SAMPLES ============ */
+    .samples-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+    .sample-card {
+      background: white; border-radius: 22px; overflow: hidden;
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+      box-shadow: 0 8px 24px -16px rgba(15,23,42,0.15);
+      display: flex; flex-direction: column;
+    }
+    .sample-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 24px 40px -20px rgba(99,102,241,0.3);
+      border-color: #c7d2fe;
+    }
+    .sample-head {
+      padding: 24px 24px 18px;
+      color: white; position: relative; overflow: hidden;
+    }
+    .sample-head.s1 { background: var(--grad-1); }
+    .sample-head.s2 { background: var(--grad-2); }
+    .sample-head.s3 { background: var(--grad-3); }
+    .sample-head.s4 { background: var(--grad-4); }
+    .sample-head.s5 { background: var(--grad-5); }
+    .sample-head.s6 { background: var(--grad-6); }
+    .sample-head.s7 { background: var(--grad-7); }
+    .sample-head::after {
+      content: ''; position: absolute;
+      top: -30px; right: -30px; width: 120px; height: 120px;
+      background: rgba(255,255,255,0.15); border-radius: 50%;
+    }
+    .sample-head .type {
+      font-size: 0.68rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.8px;
+      opacity: 0.9; margin-bottom: 8px;
+    }
+    .sample-head h3 {
+      font-family: 'Poppins', sans-serif; font-size: 1.08rem;
+      font-weight: 700; line-height: 1.3; position: relative; z-index: 1;
+    }
+    .sample-body { padding: 20px 24px 24px; flex: 1; display: flex; flex-direction: column; }
+    .sample-body p {
+      font-size: 0.87rem; color: var(--gray); margin-bottom: 16px; flex: 1;
+    }
+    .sample-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
+    .sample-tag {
+      background: #f1f5f9; color: var(--gray);
+      font-size: 0.68rem; font-weight: 600;
+      padding: 4px 10px; border-radius: 12px;
+    }
+    .sample-link {
+      text-decoration: none; color: var(--indigo);
+      font-weight: 700; font-size: 0.85rem;
+      display: inline-flex; align-items: center; gap: 6px;
+      transition: gap 0.2s;
+    }
+    .sample-link:hover { gap: 12px; }
+
+    /* ============ CUSTOMER FLOW ============ */
+    .flow-section {
+      background: linear-gradient(135deg, #1e1b4b 0%, #4c1d95 50%, #831843 100%);
+      border-radius: 48px; margin: 40px 24px; padding: 70px 0;
+      position: relative; overflow: hidden;
+    }
+    .flow-section::before {
+      content: ''; position: absolute; inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(236,72,153,0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(59,130,246,0.3) 0%, transparent 50%);
+    }
+    .flow-section .container { position: relative; z-index: 1; }
+    .flow-section .sec-head h2 { color: white; }
+    .flow-section .sec-head p { color: #c7d2fe; }
+
+    .flow-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
+    }
+    .flow-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 22px; padding: 26px 20px;
+      color: white; position: relative;
+      transition: all 0.3s;
+    }
+    .flow-card:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-6px);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+    .flow-num {
+      width: 44px; height: 44px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Poppins', sans-serif; font-weight: 800;
+      font-size: 1.05rem; margin-bottom: 14px; color: white;
+    }
+    .flow-card:nth-child(1) .flow-num { background: var(--grad-1); }
+    .flow-card:nth-child(2) .flow-num { background: var(--grad-2); }
+    .flow-card:nth-child(3) .flow-num { background: var(--grad-3); }
+    .flow-card:nth-child(4) .flow-num { background: var(--grad-4); }
+    .flow-card:nth-child(5) .flow-num { background: var(--grad-5); }
+    .flow-card h4 {
+      font-family: 'Poppins', sans-serif; font-size: 0.96rem;
+      font-weight: 700; margin-bottom: 8px;
+    }
+    .flow-card p { font-size: 0.82rem; color: #cbd5e1; line-height: 1.55; }
+
+    /* ============ SOCIAL ============ */
+    .social-section {
+      background: white; border-radius: 40px;
+      padding: 60px 40px; margin: 30px 0;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 40px -25px rgba(99,102,241,0.2);
+    }
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px; margin-top: 40px;
+    }
+    .social-card {
+      display: flex; align-items: center; gap: 16px;
+      padding: 22px 20px; border-radius: 20px;
+      text-decoration: none; color: white;
+      transition: all 0.3s; position: relative; overflow: hidden;
+      box-shadow: 0 10px 24px -12px rgba(0,0,0,0.3);
+    }
+    .social-card::after {
+      content: ''; position: absolute;
+      top: -40px; right: -40px; width: 100px; height: 100px;
+      background: rgba(255,255,255,0.15); border-radius: 50%;
+    }
+    .social-card:hover { transform: translateY(-5px) scale(1.02); }
+    .social-card.facebook { background: var(--grad-facebook); }
+    .social-card.linkedin { background: var(--grad-linkedin); }
+    .social-card.whatsapp { background: var(--grad-whatsapp); }
+    .social-card.telegram { background: var(--grad-telegram); }
+    .social-card.email { background: linear-gradient(135deg, #ec4899, #f43f5e); }
+    .social-card.blog { background: linear-gradient(135deg, #f59e0b, #f97316); }
+
+    .social-icon {
+      width: 48px; height: 48px; border-radius: 14px;
+      background: rgba(255,255,255,0.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; flex-shrink: 0;
+      position: relative; z-index: 1;
+    }
+    .social-info { position: relative; z-index: 1; min-width: 0; }
+    .social-info h4 {
+      font-family: 'Poppins', sans-serif; font-size: 0.96rem;
+      font-weight: 700; margin-bottom: 2px;
+    }
+    .social-info p {
+      font-size: 0.76rem; opacity: 0.9;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    }
+
+    /* ============ CONTACT ============ */
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 40px;
+      background: white; border-radius: 40px;
+      padding: 50px 44px;
+      box-shadow: 0 30px 60px -30px rgba(99,102,241,0.3);
+      border: 1px solid var(--border);
+    }
+    .contact-info h3 {
+      font-family: 'Poppins', sans-serif; font-size: 1.5rem;
+      font-weight: 800; color: var(--dark); margin-bottom: 14px;
+      line-height: 1.25;
+    }
+    .contact-info > p { font-size: 0.94rem; color: var(--gray); margin-bottom: 26px; }
+    .contact-list { display: flex; flex-direction: column; gap: 12px; }
+    .contact-item {
+      display: flex; align-items: center; gap: 14px;
+      padding: 14px 16px; border-radius: 16px;
+      background: #f8fafc; border: 1px solid var(--border);
+      text-decoration: none; color: var(--dark-2);
+      transition: all 0.25s;
+    }
+    .contact-item:hover {
+      background: #f5f3ff; border-color: #c4b5fd;
+      transform: translateX(6px);
+    }
+    .contact-item .ci-icon {
+      width: 42px; height: 42px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 1.1rem; flex-shrink: 0;
+    }
+    .contact-item .ci-icon.blue { background: var(--grad-hero); }
+    .contact-item .ci-icon.green { background: var(--grad-whatsapp); }
+    .contact-item .ci-icon.amber { background: var(--grad-cd); }
+    .contact-item .ci-icon.pink { background: linear-gradient(135deg, #ec4899, #f43f5e); }
+    .contact-item .ci-label {
+      font-size: 0.7rem; color: var(--gray-light);
+      text-transform: uppercase; letter-spacing: 0.5px;
+      font-weight: 700; margin-bottom: 2px;
+    }
+    .contact-item .ci-value {
+      font-size: 0.9rem; font-weight: 600; color: var(--dark);
+      word-break: break-word;
+    }
+
+    .contact-form h3 {
+      font-family: 'Poppins', sans-serif; font-size: 1.25rem;
+      font-weight: 700; color: var(--dark); margin-bottom: 20px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block; font-size: 0.8rem; font-weight: 600;
+      color: var(--dark-2); margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%; padding: 12px 16px;
+      border: 1.5px solid var(--border); border-radius: 12px;
+      font-family: inherit; font-size: 0.9rem; color: var(--dark-2);
+      background: #f8fafc; transition: all 0.2s; outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--indigo);
+      background: white;
+      box-shadow: 0 0 0 4px rgba(99,102,241,0.1);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit {
+      width: 100%; padding: 14px; border: none;
+      background: var(--grad-hero); color: white;
+      border-radius: 14px; font-family: inherit;
+      font-weight: 700; font-size: 0.95rem;
+      cursor: pointer; transition: all 0.25s;
+      box-shadow: 0 12px 26px -10px rgba(99,102,241,0.5);
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .form-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 32px -12px rgba(99,102,241,0.6);
+    }
+
+    /* ============ CTA ============ */
+    .cta {
+      background: var(--grad-hero);
+      border-radius: 40px; padding: 60px 50px;
+      display: flex; flex-wrap: wrap;
+      align-items: center; justify-content: space-between;
+      gap: 30px; position: relative; overflow: hidden;
+      box-shadow: 0 30px 60px -20px rgba(99,102,241,0.5);
+    }
+    .cta::before {
+      content: ''; position: absolute;
+      top: -100px; right: -100px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .cta-content { position: relative; z-index: 1; max-width: 560px; }
+    .cta h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(1.35rem, 2.8vw, 1.9rem);
+      font-weight: 800; color: white; line-height: 1.25; margin-bottom: 12px;
+    }
+    .cta p { color: rgba(255,255,255,0.92); font-size: 0.96rem; }
+    .cta-actions { display: flex; gap: 12px; flex-wrap: wrap; position: relative; z-index: 1; }
+    .cta .btn-white {
+      background: white; color: #4c1d95; font-weight: 700;
+      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.3);
+    }
+    .cta .btn-white:hover {
+      background: #f5f3ff; transform: translateY(-3px);
+      box-shadow: 0 16px 36px -12px rgba(0,0,0,0.4);
+    }
+    .cta .btn-ghost {
+      background: rgba(255,255,255,0.15); color: white;
+      border: 2px solid rgba(255,255,255,0.3);
+      backdrop-filter: blur(8px);
+    }
+    .cta .btn-ghost:hover {
+      background: rgba(255,255,255,0.25); border-color: white;
+    }
+
+    /* ============ FOOTER ============ */
+    footer {
+      background: var(--dark); color: #cbd5e1;
+      padding: 60px 0 30px; margin-top: 60px;
+      position: relative;
+    }
+    footer::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 4px; background: var(--grad-rainbow);
+      background-size: 200% 200%; animation: shimmer 4s ease infinite;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px; margin-bottom: 40px;
+    }
+    .footer-brand .logo { color: white; margin-bottom: 16px; }
+    .footer-brand .logo span {
+      background: linear-gradient(135deg, #a78bfa, #f472b6);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .footer-brand p {
+      font-size: 0.85rem; color: #94a3b8;
+      max-width: 320px; line-height: 1.65; margin-bottom: 18px;
+    }
+    .footer-col h4 {
+      font-size: 0.78rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 1px;
+      color: white; margin-bottom: 18px;
+    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .footer-col a {
+      text-decoration: none; color: #94a3b8;
+      font-size: 0.85rem; transition: all 0.2s;
+      display: inline-flex; align-items: center; gap: 8px;
+    }
+    .footer-col a:hover { color: #a78bfa; transform: translateX(4px); }
+
+    .footer-bottom {
+      border-top: 1px solid #1e293b; padding-top: 26px;
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 16px;
+      font-size: 0.82rem; color: #64748b;
+    }
+    .socials { display: flex; gap: 10px; }
+    .socials a {
+      width: 38px; height: 38px; border-radius: 12px;
+      background: #1e293b; color: #94a3b8;
+      display: flex; align-items: center; justify-content: center;
+      text-decoration: none; font-size: 0.9rem;
+      transition: all 0.25s;
+    }
+    .socials a.fb:hover { background: #1877F2; color: white; transform: translateY(-3px); }
+    .socials a.li:hover { background: #0A66C2; color: white; transform: translateY(-3px); }
+    .socials a.wa:hover { background: #25D366; color: white; transform: translateY(-3px); }
+    .socials a.tg:hover { background: #229ED9; color: white; transform: translateY(-3px); }
+    .socials a.em:hover { background: #ec4899; color: white; transform: translateY(-3px); }
+
+    /* ============ MOBILE MENU ============ */
+    .mobile-menu {
+      display: none; position: fixed; inset: 0;
+      background: white; z-index: 200; padding: 28px;
+      flex-direction: column; overflow-y: auto;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu .close {
+      align-self: flex-end; background: none; border: none;
+      font-size: 1.6rem; color: var(--dark); cursor: pointer;
+      margin-bottom: 24px;
+    }
+    .mobile-menu a {
+      text-decoration: none; color: var(--dark-2);
+      font-size: 1.02rem; font-weight: 600;
+      padding: 14px 8px; border-bottom: 1px solid var(--border);
+      transition: color 0.2s;
+    }
+    .mobile-menu a:hover { color: var(--indigo); }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 1024px) {
+      .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+      .nav-links { display: none; }
+      .hamburger { display: block; }
+      .contact-wrap { grid-template-columns: 1fr; padding: 36px 28px; }
+      .flow-section { margin: 30px 16px; border-radius: 32px; padding: 50px 0; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .nav-actions .btn-outline { display: none; }
+      .hero { padding: 40px 0 30px; }
+      .hero-cta { flex-direction: column; align-items: stretch; }
+      .hero-cta .btn { justify-content: center; }
+      section { padding: 50px 0; }
+      .form-row { grid-template-columns: 1fr; }
+      .cta { padding: 40px 26px; border-radius: 28px; }
+      .cta-actions { width: 100%; flex-direction: column; }
+      .cta-actions .btn { justify-content: center; width: 100%; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .social-section { padding: 40px 24px; border-radius: 28px; }
+      .topbar-left span:nth-child(2) { display: none; }
+      .fab { width: 52px; height: 52px; font-size: 1.3rem; }
+      .profile-stats { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s, transform 0.7s; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <!-- ============ FLOATING BUTTONS ============ -->
+  <div class="fab-stack">
+    <a href="https://wa.me/251917106325?text=Hello%20MT%20Consultancy%2C%20I%27d%20like%20to%20discuss%20a%20project."
+       class="fab whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+      <span class="label">Chat on WhatsApp</span>
+    </a>
+    <a href="tel:+251917106325" class="fab call" aria-label="Call">
+      <i class="fas fa-phone"></i>
+      <span class="label">Call Now</span>
+    </a>
+    <a href="#top" class="fab top" id="topBtn" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+      <span class="label">Back to Top</span>
+    </a>
+  </div>
+
+  <!-- ============ TOP BAR ============ -->
+  <div class="topbar">
+    <div class="container topbar-wrap">
+      <div class="topbar-left">
+        <span><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</span>
+        <span><i class="fas fa-envelope"></i> mohammedscho2023@gmail.com</span>
+        <span><i class="fas fa-phone"></i> +251 917 106 325</span>
+      </div>
+      <div class="topbar-social">
+        <a href="https://facebook.com/" class="fb" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://linkedin.com/in/mohammed-tura-044b0b96" class="li" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://wa.me/251917106325" class="wa" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://t.me/" class="tg" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+        <a href="mailto:mohammedscho2023@gmail.com" class="em" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-wrap">
+      <a href="#top" class="logo">
+        <span class="logo-icon"><i class="fas fa-briefcase"></i></span>
+        MT<span>Consultancy</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#store">Store</a>
+        <a href="#samples">Samples</a>
+        <a href="#flow">Process</a>
+        <a href="#social">Follow</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:+251917106325" class="btn btn-outline"><i class="fas fa-phone"></i> Call</a>
+        <a href="https://wa.me/251917106325" class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close" id="closeMenu" aria-label="Close"><i class="fas fa-times"></i></button>
+    <a href="#services">Services</a>
+    <a href="#store">Store</a>
+    <a href="#samples">Samples</a>
+    <a href="#flow">Process</a>
+    <a href="#social">Follow Me</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:+251917106325" style="color: var(--indigo);">📞 Call Now</a>
+    <a href="https://wa.me/251917106325" style="color: #25D366;">💬 WhatsApp</a>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <div class="badge"><i class="fas fa-award"></i> Trusted by NGOs, Businesses & Development Partners</div>
+        <h1>Consultancy for <span class="grad">Program Development</span> & <span class="grad-pink">Business Growth</span></h1>
+        <p class="lead">
+          Full-service consultancy: Program Development, Business Research, Business Analysis, Proposal & Concept Note
+          Development, Model Development, Training Delivery, and Monitoring & Evaluation — for NGOs, businesses, and
+          development partners.
+        </p>
+        <div class="hero-cta">
+          <a href="https://wa.me/251917106325?text=Hello%2C%20I%20want%20to%20discuss%20a%20consultancy%20project."
+             class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+          <a href="tel:+251917106325" class="btn btn-primary btn-lg">
+            <i class="fas fa-phone"></i> Call Me
+          </a>
+        </div>
+        <div class="trust-row">
+          <div class="trust-item"><i class="fas fa-check-circle"></i> <span>Certified Grant Writer</span></div>
+          <div class="trust-item"><i class="fas fa-check-circle"></i> <span>PRINCE2 Certified</span></div>
+          <div class="trust-item"><i class="fas fa-check-circle"></i> <span>MBA Project Management</span></div>
+        </div>
+      </div>
+
+      <aside class="profile-card reveal">
+        <div class="profile-top">
+          <div class="avatar">MT</div>
+          <div>
+            <h3>Mohammed Tura</h3>
+            <p>Lead Consultant & Program Specialist</p>
+          </div>
+        </div>
+        <div class="profile-stats">
+          <div class="stat s-blue"><strong>10+</strong><span>Years</span></div>
+          <div class="stat s-pink"><strong>7</strong><span>Services</span></div>
+          <div class="stat s-green"><strong>15+</strong><span>Donors</span></div>
+        </div>
+        <div class="profile-contact">
+          <div class="pc-item"><i class="fas fa-phone"></i> <a href="tel:+251917106325">+251 917 106 325</a></div>
+          <div class="pc-item"><i class="fas fa-envelope"></i> <a href="mailto:mohammedscho2023@gmail.com">mohammedscho2023@gmail.com</a></div>
+          <div class="pc-item"><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES (7 SERVICES) ============ -->
+  <section id="services">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="eyebrow e-rainbow">Our Services</span>
+        <h2>7 Core Consultancy Services</h2>
+        <p>End-to-end support for program development, business research, analysis, and results measurement.</p>
+      </div>
+
+      <div class="services-grid">
+
+        <!-- 1. Program Development -->
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-diagram-project"></i></div>
+          <h3>Program Development</h3>
+          <p>Design and set up new programs from scratch — theory of change, logframes, budgets, staffing plans, and implementation roadmaps.</p>
+          <div class="service-tags">
+            <span class="service-tag">Design</span>
+            <span class="service-tag">Logframe</span>
+            <span class="service-tag">Strategy</span>
+          </div>
+          <a href="https://wa.me/251917106325?text=I%20need%20Program%20Development%20support." class="service-link" target="_blank" rel="noopener">
+            Request Service <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- 2. Business Research -->
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-magnifying-glass-chart"></i></div>
+          <h3>Business Research</h3>
+          <p>Market research, feasibility studies, baseline surveys, competitor analysis, and evidence synthesis to inform decisions.</p>
+          <div class="service-tags">
+            <span class="service-tag">Market Research</span>
+            <span class="service-tag">Feasibility</span>
+            <span class="service-tag">Baseline</span>
+          </div>
+          <a href="https://wa.me/251917106325?text=I%20need%20Business%20Research%20services." class="service-link" target="_blank" rel="noopener">
+            Request Service <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- 3. Business Analysis -->
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
+          <h3>Business Analysis</h3>
+          <p>Diagnose business performance, identify gaps, and recommend improvements. Data analysis, process mapping, and KPI design.</p>
+          <div class="service-tags">
+            <span class="service-tag">Diagnostics</span>
+            <span class="service-tag">KPIs</span>
+            <span class="service-tag">Process</span>
+          </div>
+          <a href="https://wa.me/251917106325?text=I%20need%20Business%20Analysis%20support." class="service-link" target="_blank" rel="noopener">
+            Request Service <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- 4. Proposal & Concept Note Development -->
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-file-signature"></i></div>
+          <h3>Proposal & Concept Note Development</h3>
+          <p>Winning proposals and concept notes for donors and investors. Full-cycle writing, budgeting, and compliance review.</p>
+          <div class="service-tags">
+            <span class="service-tag">Proposals</span>
+            <span class="service-tag">Concept Notes</span>
+            <span class="service-tag">Donors</span>
+          </div>
+          <a href="https://wa.me/251917106325?text=I%20need%20Proposal%20%26%20Concept%20Note%20development." class="service-link" target="_blank" rel="noopener">
+            Request Service <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- 5. Model Development -->
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-cubes"></i></div>
+          <h3>Model Development</h3>
+          <p>Develop business models, financial models, program models, and scalable implementation frameworks for your organization.</p>
+          <div class="service-tags">
+            <span class="service-tag">Business Model</span>
+            <span class="service-tag">Financial</span>
+            <span class="service-tag">Scalable</span>
+          </div>
+          <a href="https://wa.me/251917106325?text=I%20need%20Model%20Development%20support." class="service-link" target="_blank" rel="noopener">
+            Request Service <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- 6. Training Delivery -->
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-chalkboard-user"></i></div>
+          <h3>Training Delivery</h3>
+          <p>Customized in-person and online training — grant writing, program management, MEAL, safeguarding, AI for NGOs.</p>
+          <div class="service-tags">
+            <span class="service-tag">Workshops</span>
+            <span class="service-tag">Online</span>
+            <span class="service-tag">In-Person</span>
+          </div>
+          <a href="https://wa.me/251917106325?text=I%20need%20Training%20Delivery%20services." class="service-link" target="_blank" rel="noopener">
+            Request Service <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- 7. Monitoring & Evaluation -->
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-clipboard-check"></i></div>
+          <h3>Monitoring & Evaluation</h3>
+          <p>Design and deliver M&E systems, baseline/midline/endline evaluations, impact assessments, and learning reports.</p>
+          <div class="service-tags">
+            <span class="service-tag">M&E Systems</span>
+            <span class="service-tag">Evaluations</span>
+            <span class="service-tag">Impact</span>
+          </div>
+          <a href="https://wa.me/251917106325?text=I%20need%20Monitoring%20%26%20Evaluation%20support." class="service-link" target="_blank" rel="noopener">
+            Request Service <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STORE ============ -->
+  <section id="store" style="background: #ffffff;">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="eyebrow e-purple">Digital Store</span>
+        <h2>Products & Tools</h2>
+        <p>Ready-to-use templates, toolkits, and courses to accelerate your work — buy instantly via WhatsApp.</p>
+      </div>
+
+      <div class="store-grid">
+
+        <div class="product-card reveal">
+          <div class="product-thumb p1">
+            <span class="product-badge hot">🔥 Best Seller</span>
+            <i class="fas fa-file-signature"></i>
+          </div>
+          <div class="product-body">
+            <div class="cat">Proposal Toolkit</div>
+            <h3>The AI Grantmaker's Playbook</h3>
+            <p>Complete proposal + concept note templates with AI prompts. Write winning submissions in half the time.</p>
+            <div class="product-meta">
+              <div class="product-price">$49 <small>USD</small></div>
+              <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>4.9</span></div>
+            </div>
+            <div class="product-actions">
+              <a href="https://wa.me/251917106325?text=I%20want%20to%20buy%20the%20AI%20Grantmaker%27s%20Playbook." class="btn btn-whatsapp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Buy Now</a>
+              <a href="#samples" class="btn btn-outline"><i class="fas fa-eye"></i> Preview</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-thumb p2">
+            <span class="product-badge new">✨ New</span>
+            <i class="fas fa-clipboard-check"></i>
+          </div>
+          <div class="product-body">
+            <div class="cat">MEAL Toolkit</div>
+            <h3>M&E Framework Toolkit</h3>
+            <p>Logframe templates, indicator banks, data collection tools, and evaluation report templates.</p>
+            <div class="product-meta">
+              <div class="product-price">$79 <small>USD</small></div>
+              <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>4.8</span></div>
+            </div>
+            <div class="product-actions">
+              <a href="https://wa.me/251917106325?text=I%20want%20to%20buy%20the%20M%26E%20Framework%20Toolkit." class="btn btn-whatsapp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Buy Now</a>
+              <a href="#samples" class="btn btn-outline"><i class="fas fa-eye"></i> Preview</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-thumb p3">
+            <span class="product-badge">📘 Guide</span>
+            <i class="fas fa-book"></i>
+          </div>
+          <div class="product-body">
+            <div class="cat">Research Guide</div>
+            <h3>Research & Business Analysis Guide</h3>
+            <p>Step-by-step methodology for market research, feasibility studies, and business gap analysis.</p>
+            <div class="product-meta">
+              <div class="product-price">$39 <small>USD</small></div>
+              <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span>4.7</span></div>
+            </div>
+            <div class="product-actions">
+              <a href="https://wa.me/251917106325?text=I%20want%20to%20buy%20the%20Research%20%26%20Business%20Analysis%20Guide." class="btn btn-whatsapp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Buy Now</a>
+              <a href="#samples" class="btn btn-outline"><i class="fas fa-eye"></i> Preview</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-thumb p4">
+            <span class="product-badge hot">🔥 Popular</span>
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="product-body">
+            <div class="cat">Online Course</div>
+            <h3>AI for Consultants & Managers</h3>
+            <p>Use AI to write proposals, analyze data, automate reports, and manage projects smarter.</p>
+            <div class="product-meta">
+              <div class="product-price">$99 <small>USD</small></div>
+              <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>5.0</span></div>
+            </div>
+            <div class="product-actions">
+              <a href="https://wa.me/251917106325?text=I%20want%20to%20enroll%20in%20AI%20for%20Consultants." class="btn btn-whatsapp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Enroll</a>
+              <a href="#samples" class="btn btn-outline"><i class="fas fa-eye"></i> Preview</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-thumb p5">
+            <span class="product-badge">💼 Template</span>
+            <i class="fas fa-cubes"></i>
+          </div>
+          <div class="product-body">
+            <div class="cat">Model Templates</div>
+            <h3>Business & Program Model Pack</h3>
+            <p>Ready-to-customize business model canvas, financial model, and program logic model templates.</p>
+            <div class="product-meta">
+              <div class="product-price">$59 <small>USD</small></div>
+              <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span>4.6</span></div>
+            </div>
+            <div class="product-actions">
+              <a href="https://wa.me/251917106325?text=I%20want%20to%20buy%20the%20Model%20Templates%20Pack." class="btn btn-whatsapp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Buy Now</a>
+              <a href="#samples" class="btn btn-outline"><i class="fas fa-eye"></i> Preview</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card reveal">
+          <div class="product-thumb p6">
+            <span class="product-badge new">✨ New</span>
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="product-body">
+            <div class="cat">Training Pack</div>
+            <h3>Consultant Training Bundle</h3>
+            <p>Complete set of training slides, facilitator guides, and exercises for M&E, proposal writing, and business analysis.</p>
+            <div class="product-meta">
+              <div class="product-price">$129 <small>USD</small></div>
+              <div class="product-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>4.9</span></div>
+            </div>
+            <div class="product-actions">
+              <a href="https://wa.me/251917106325?text=I%20want%20to%20buy%20the%20Consultant%20Training%20Bundle." class="btn btn-whatsapp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Buy Now</a>
+              <a href="#samples" class="btn btn-outline"><i class="fas fa-eye"></i> Preview</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SAMPLES ============ -->
+  <section id="samples">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="eyebrow e-blue">Portfolio</span>
+        <h2>Sample Projects & Deliverables</h2>
+        <p>Selected work demonstrating expertise across all 7 service areas.</p>
+      </div>
+
+      <div class="samples-grid">
+
+        <div class="sample-card reveal">
+          <div class="sample-head s1">
+            <div class="type">📄 Program Design</div>
+            <h3>Education Program Design — UNICEF Funded</h3>
+          </div>
+          <div class="sample-body">
+            <p>Full program design for a $2M education in emergencies initiative — including theory of change, logframe, budget, and MEAL plan.</p>
+            <div class="sample-tags">
+              <span class="sample-tag">Program Development</span>
+              <span class="sample-tag">EiE</span>
+              <span class="sample-tag">UNICEF</span>
+            </div>
+            <a href="https://wa.me/251917106325?text=I%20want%20a%20sample%20of%20the%20Education%20Program%20Design." class="sample-link" target="_blank" rel="noopener">
+              Request Sample <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="sample-card reveal">
+          <div class="sample-head s2">
+            <div class="type">📊 Business Research</div>
+            <h3>Market Feasibility Study — Agri-Business</h3>
+          </div>
+          <div class="sample-body">
+            <p>Comprehensive market research and feasibility analysis for a new agri-business venture in Ethiopia, including competitor and pricing analysis.</p>
+            <div class="sample-tags">
+              <span class="sample-tag">Business Research</span>
+              <span class="sample-tag">Feasibility</span>
+              <span class="sample-tag">Market</span>
+            </div>
+            <a href="https://wa.me/251917106325?text=I%20want%20a%20sample%20of%20the%20Market%20Feasibility%20Study." class="sample-link" target="_blank" rel="noopener">
+              Request Sample <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="sample-card reveal">
+          <div class="sample-head s3">
+            <div class="type">💰 Proposal</div>
+            <h3>Winning Grant Proposal — FCDO</h3>
+          </div>
+          <div class="sample-body">
+            <p>Full proposal for a $1.5M child protection program — approved on first submission. Includes concept note, logframe, and budget.</p>
+            <div class="sample-tags">
+              <span class="sample-tag">Proposal</span>
+              <span class="sample-tag">Concept Note</span>
+              <span class="sample-tag">FCDO</span>
+            </div>
+            <a href="https://wa.me/251917106325?text=I%20want%20a%20sample%20of%20the%20FCDO%20Proposal." class="sample-link" target="_blank" rel="noopener">
+              Request Sample <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="sample-card reveal">
+          <div class="sample-head s4">
+            <div class="type">📈 M&E</div>
+            <h3>Impact Evaluation — Community WASH</h3>
+          </div>
+          <div class="sample-body">
+            <p>Endline impact evaluation of a 3-year WASH program across 40 communities, with mixed-methods data collection and analysis.</p>
+            <div class="sample-tags">
+              <span class="sample-tag">M&E</span>
+              <span class="sample-tag">Impact</span>
+              <span class="sample-tag">WASH</span>
+            </div>
+            <a href="https://wa.me/251917106325?text=I%20want%20a%20sample%20of%20the%20WASH%20Impact%20Evaluation." class="sample-link" target="_blank" rel="noopener">
+              Request Sample <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="sample-card reveal">
+          <div class="sample-head s5">
+            <div class="type">🧩 Model</div>
+            <h3>Business Model — Social Enterprise</h3>
+          </div>
+          <div class="sample-body">
+            <p>Business model canvas, financial projections, and scalability plan for a social enterprise in education technology.</p>
+            <div class="sample-tags">
+              <span class="sample-tag">Model Dev.</span>
+              <span class="sample-tag">Financial</span>
+              <span class="sample-tag">Social Enterprise</span>
+            </div>
+            <a href="https://wa.me/251917106325?text=I%20want%20a%20sample%20of%20the%20Business%20Model." class="sample-link" target="_blank" rel="noopener">
+              Request Sample <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="sample-card reveal">
+          <div class="sample-head s6">
+            <div class="type">🎓 Training</div>
+            <h3>Training Program — Grant Writing</h3>
+          </div>
+          <div class="sample-body">
+            <p>3-day training curriculum, facilitator guide, and participant workbook for NGO staff on grant writing and donor reporting.</p>
+            <div class="sample-tags">
+              <span class="sample-tag">Training</span>
+              <span class="sample-tag">Grant Writing</span>
+              <span class="sample-tag">Curriculum</span>
+            </div>
+            <a href="https://wa.me/251917106325?text=I%20want%20a%20sample%20of%20the%20Grant%20Writing%20Training." class="sample-link" target="_blank" rel="noopener">
+              Request Sample <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="sample-card reveal">
+          <div class="sample-head s7">
+            <div class="type">📊 Analysis</div>
+            <h3>Business Analysis — NGO Operations</h3>
+          </div>
+          <div class="sample-body">
+            <p>Operational diagnostic for an NGO, including process mapping, KPI design, and cost-efficiency recommendations.</p>
+            <div class="sample-tags">
+              <span class="sample-tag">Business Analysis</span>
+              <span class="sample-tag">KPIs</span>
+              <span class="sample-tag">Process</span>
+            </div>
+            <a href="https://wa.me/251917106325?text=I%20want%20a%20sample%20of%20the%20Business%20Analysis." class="sample-link" target="_blank" rel="noopener">
+              Request Sample <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CUSTOMER FLOW ============ -->
+  <section class="flow-section" id="flow">
+    <div class="container">
+      <div class="sec-head reveal">
+        <span class="eyebrow" style="background: rgba(255,255,255,0.15); color: white; border-color: rgba(255,255,255,0.25);">How It Works</span>
+        <h2>Our 5-Step Customer Flow</h2>
+        <p>From first contact to final delivery — a clear, transparent, and professional process.</p>
+      </div>
+
+      <div class="flow-grid">
+        <div class="flow-card reveal">
+          <div class="flow-num">01</div>
+          <h4>Reach Out</h4>
+          <p>Contact via WhatsApp, phone, email, or the form below. Tell us about your project needs.</p>
+        </div>
+        <div class="flow-card reveal">
+          <div class="flow-num">02</div>
+          <h4>Free Consultation</h4>
+          <p>We schedule a free 30-minute call to understand your goals, scope, and timeline.</p>
+        </div>
+        <div class="flow-card reveal">
+          <div class="flow-num">03</div>
+          <h4>Proposal & Quote</h4>
+          <p>You receive a tailored proposal with deliverables, timeline, and transparent pricing.</p>
+        </div>
+        <div class="flow-card reveal">
+          <div class="flow-num">04</div>
+          <h4>Delivery</h4>
+          <p>We execute the work with regular updates, milestones, and quality assurance checks.</p>
+        </div>
+        <div class="flow-card reveal">
+          <div class="flow-num">05</div>
+          <h4>Support & Follow-Up</h4>
+          <p>Post-delivery support, revisions, and follow-up to ensure lasting impact.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOCIAL / FOLLOW ============ -->
+  <section id="social">
+    <div class="container">
+      <div class="social-section reveal">
+        <div class="sec-head" style="margin-bottom: 0;">
+          <span class="eyebrow e-rainbow">Connect With Us</span>
+          <h2>Follow · Chat · Call · Subscribe</h2>
+          <p>Stay connected across all platforms for updates, insights, and instant support.</p>
+        </div>
+
+        <div class="social-grid">
+          <a href="https://facebook.com/" class="social-card facebook" target="_blank" rel="noopener">
+            <div class="social-icon"><i class="fab fa-facebook-f"></i></div>
+            <div class="social-info">
+              <h4>Facebook</h4>
+              <p>Follow for daily updates</p>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/mohammed-tura-044b0b96" class="social-card linkedin" target="_blank" rel="noopener">
+            <div class="social-icon"><i class="fab fa-linkedin-in"></i></div>
+            <div class="social-info">
+              <h4>LinkedIn</h4>
+              <p>Connect professionally</p>
+            </div>
+          </a>
+          <a href="https://wa.me/251917106325" class="social-card whatsapp" target="_blank" rel="noopener">
+            <div class="social-icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="social-info">
+              <h4>WhatsApp</h4>
+              <p>+251 917 106 325</p>
+            </div>
+          </a>
+          <a href="https://t.me/" class="social-card telegram" target="_blank" rel="noopener">
+            <div class="social-icon"><i class="fab fa-telegram-plane"></i></div>
+            <div class="social-info">
+              <h4>Telegram</h4>
+              <p>Join our channel</p>
+            </div>
+          </a>
+          <a href="mailto:mohammedscho2023@gmail.com" class="social-card email">
+            <div class="social-icon"><i class="fas fa-envelope"></i></div>
+            <div class="social-info">
+              <h4>Email Us</h4>
+              <p>mohammedscho2023@gmail.com</p>
+            </div>
+          </a>
+          <a href="#" class="social-card blog" target="_blank" rel="noopener">
+            <div class="social-icon"><i class="fas fa-blog"></i></div>
+            <div class="social-info">
+              <h4>Blog</h4>
+              <p>Read our insights</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" style="padding-top: 30px;">
+    <div class="container">
+      <div class="contact-wrap reveal">
+        <div class="contact-info">
+          <h3>Let's Build Something Together</h3>
+          <p>Reach out through any channel — we respond within 24 hours on business days.</p>
+          <div class="contact-list">
+            <a href="tel:+251917106325" class="contact-item">
+              <div class="ci-icon blue"><i class="fas fa-phone"></i></div>
+              <div>
+                <div class="ci-label">Call Me</div>
+                <div class="ci-value">+251 917 106 325</div>
+              </div>
+            </a>
+            <a href="https://wa.me/251917106325" class="contact-item" target="_blank" rel="noopener">
+              <div class="ci-icon green"><i class="fab fa-whatsapp"></i></div>
+              <div>
+                <div class="ci-label">WhatsApp</div>
+                <div class="ci-value">Chat instantly</div>
+              </div>
+            </a>
+            <a href="mailto:mohammedscho2023@gmail.com" class="contact-item">
+              <div class="ci-icon pink"><i class="fas fa-envelope"></i></div>
+              <div>
+                <div class="ci-label">Email</div>
+                <div class="ci-value">mohammedscho2023@gmail.com</div>
+              </div>
+            </a>
+            <a href="https://linkedin.com/in/mohammed-tura-044b0b96" class="contact-item" target="_blank" rel="noopener">
+              <div class="ci-icon amber"><i class="fab fa-linkedin-in"></i></div>
+              <div>
+                <div class="ci-label">LinkedIn</div>
+                <div class="ci-value">Connect professionally</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3>Send Us a Message</h3>
+          <form onsubmit="sendToWhatsApp(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="fname" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="femail" placeholder="you@example.com" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Phone</label>
+                <input type="tel" id="fphone" placeholder="+251 ...">
+              </div>
+              <div class="form-group">
+                <label>Service Needed</label>
+                <select id="fservice">
+                  <option>Program Development</option>
+                  <option>Business Research</option>
+                  <option>Business Analysis</option>
+                  <option>Proposal & Concept Note</option>
+                  <option>Model Development</option>
+                  <option>Training Delivery</option>
+                  <option>Monitoring & Evaluation</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea id="fmsg" placeholder="Tell us about your project..." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              <i class="fab fa-whatsapp"></i> Send via WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <div class="container" style="margin-top: 40px;">
+    <div class="cta reveal">
+      <div class="cta-content">
+        <h3>Ready to Start Your Project?</h3>
+        <p>Free 30-minute consultation. No obligation. Get expert advice on program development, research, proposals, or M&E today.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="https://wa.me/251917106325?text=Hi%2C%20I%27d%20like%20a%20free%20consultation." class="btn btn-white btn-lg" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> Free Consultation
+        </a>
+        <a href="tel:+251917106325" class="btn btn-ghost btn-lg">
+          <i class="fas fa-phone"></i> Call Now
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#top" class="logo">
+            <span class="logo-icon"><i class="fas fa-briefcase"></i></span>
+            MT<span>Consultancy</span>
+          </a>
+          <p>Professional consultancy for Program Development, Business Research, Business Analysis, Proposal & Concept Note Development, Model Development, Training Delivery, and Monitoring & Evaluation.</p>
+          <div class="socials">
+            <a href="https://facebook.com/" class="fb" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://linkedin.com/in/mohammed-tura-044b0b96" class="li" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://wa.me/251917106325" class="wa" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://t.me/" class="tg" target="_blank" rel="noopener" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+            <a href="mailto:mohammedscho2023@gmail.com" class="em" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services"><i class="fas fa-diagram-project"></i> Program Development</a></li>
+            <li><a href="#services"><i class="fas fa-magnifying-glass-chart"></i> Business Research</a></li>
+            <li><a href="#services"><i class="fas fa-chart-pie"></i> Business Analysis</a></li>
+            <li><a href="#services"><i class="fas fa-file-signature"></i> Proposals & Concept Notes</a></li>
+            <li><a href="#services"><i class="fas fa-cubes"></i> Model Development</a></li>
+            <li><a href="#services"><i class="fas fa-chalkboard-user"></i> Training Delivery</a></li>
+            <li><a href="#services"><i class="fas fa-clipboard-check"></i> Monitoring & Evaluation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#store"><i class="fas fa-store"></i> Digital Store</a></li>
+            <li><a href="#samples"><i class="fas fa-folder-open"></i> Samples</a></li>
+            <li><a href="#flow"><i class="fas fa-route"></i> How It Works</a></li>
+            <li><a href="#social"><i class="fas fa-share-nodes"></i> Follow Us</a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+251917106325"><i class="fas fa-phone"></i> +251 917 106 325</a></li>
+            <li><a href="https://wa.me/251917106325"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+            <li><a href="mailto:mohammedscho2023@gmail.com"><i class="fas fa-envelope"></i> Email Us</a></li>
+            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Addis Ababa, ET</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 MT Consultancy · Mohammed Tura. All rights reserved.</span>
+        <span>Made with <i class="fas fa-heart" style="color: #ec4899;"></i> in Addis Ababa</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <script>
+    // Navbar shadow
+    const navbar = document.getElementById('navbar');
+    const topBtn = document.getElementById('topBtn');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 10);
+      topBtn.classList.toggle('show', window.scrollY > 400);
+    });
+
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMenu = document.getElementById('closeMenu');
+    hamburger.addEventListener('click', () => mobileMenu.classList.add('open'));
+    closeMenu.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => mobileMenu.classList.remove('open')));
+
+    // Smooth scroll with offset
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function(e) {
+        const id = this.getAttribute('href');
+        if (id === '#') return;
+        const t = document.querySelector(id);
+        if (t) {
+          e.preventDefault();
+          const top = t.getBoundingClientRect().top + window.pageYOffset - 80;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Contact form → WhatsApp
+    function sendToWhatsApp(e) {
+      e.preventDefault();
+      const name = document.getElementById('fname').value;
+      const email = document.getElementById('femail').value;
+      const phone = document.getElementById('fphone').value;
+      const service = document.getElementById('fservice').value;
+      const msg = document.getElementById('fmsg').value;
+
+      const text = `*New Inquiry — MT Consultancy*%0A%0A` +
+                   `*Name:* ${encodeURIComponent(name)}%0A` +
+                   `*Email:* ${encodeURIComponent(email)}%0A` +
+                   `*Phone:* ${encodeURIComponent(phone)}%0A` +
+                   `*Service:* ${encodeURIComponent(service)}%0A` +
+                   `*Message:* ${encodeURIComponent(msg)}`;
+
+      window.open(`https://wa.me/251917106325?text=${text}`, '_blank');
+    }
+  </script>
+</body>
+</html>
